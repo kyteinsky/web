@@ -79,6 +79,11 @@ export const dropdownMenu: Pick<NavProps, 'dropdownMenu'> = {
       title: 'Developers',
       mainMenu: [
         {
+          title: 'Ory Summit',
+          description: 'Join our developer conference.',
+          to: '/summit'
+        },        
+        {
           title: 'Documentation',
           description: 'Documentation for all Ory products.',
           to: '/docs'

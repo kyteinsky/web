@@ -1,0 +1,191 @@
+import { StaticImage } from 'gatsby-plugin-image'
+import React from 'react'
+
+import Button from '../components/freestanding/button/button'
+import { PropTypes as FeatureContentProps } from '../components/layouts/feature-content/feature-content'
+import { PropTypes as SummitlistProps } from '../components/layouts/featurelist/feature-list'
+import { PropTypes as FeatureProps } from '../components/layouts/features/features'
+import { PropTypes as HeroProps } from '../components/layouts/hero/hero'
+import { PropTypes as SeoProps } from '../components/layouts/seo/seo'
+
+const RocketLaunch = <i className="ph-rocket-launch-fill size24" />
+const ArrowRight = <i className="ph-arrow-right-bold size16" />
+const Code = <i className={'ph-code-fill themed-primary size32'} />
+const LockOpen = <i className={'ph-lock-open-fill themed-primary size32'} />
+const UserPlus = <i className={'ph-user-plus-fill themed-primary size32'} />
+const CirclesThreePlus = (
+  <i className={'ph-circles-three-plus-fill themed-primary size32'} />
+)
+const CheckCircle = (
+  <i className={'ph-check-circle-fill themed-primary size16'} />
+)
+const CircleThreePlus = (
+  <i className={'ph-circles-three-plus-fill base-white size24'} />
+)
+
+export const seo: SeoProps = {
+  description:
+    'Ory is a certified and battle-tested identity solution backed by a large open source community and trusted by Fortune500 orgs.',
+  title: 'Ory - Open Source Identity Solutions For Everyone',
+  keywords:
+    'authentication, open source, login, authorization, security, session management, Json web tokens, access control, OAuth2.0 server, identity server, AuthN, AuthZ'
+}
+
+export const hero: HeroProps = {
+  id: 'index.hero',
+  title: 'Ory Summit 2021 ',
+  description:
+    'The Ory Summit is a free developer conference bringing together security experts and open source developers from all around the world. Join us on October 28 & 29.',
+  buttons: (
+    <Button to={'/summit21'} style={'filled'} iconRight={RocketLaunch}>
+      Sign Up
+    </Button>
+  ),
+  image: (
+    <StaticImage
+      src="../images/illustrations/summit.png"
+      loading="lazy"
+      alt="Overview of the Ory Console"
+      className="responsive"
+    />
+  )
+}
+
+export const featureContentCloud: FeatureContentProps = {
+  id: 'index.featurecontent.cloud',
+  overline: 'Audience',
+  title: <>Join a global community</>,
+  description: (
+    <>
+      Ory Summit is a meetup place for , Security Specialists, Product Owners &
+      Tech Leads and everyone interested in open source security software.
+    </>
+  ),
+  buttons: (
+    <Button to={'https://console.ory.sh'} style={'filled'}>
+      Sign Up
+    </Button>
+  ),
+  content: (
+    <StaticImage
+      loading="lazy"
+      className="responsive"
+      alt="Ory Project Dashboard"
+      src="../images/illustrations/dashboard.png"
+    />
+  )
+}
+
+export const features: FeatureProps = {
+  id: 'summit.audience',
+  overline: 'Ory Developer Conference',
+  title: <>Join a global community</>,
+  buttons: (
+    <Button
+      to={'https://console.ory.sh/registration'}
+      style={'link'}
+      iconRight={ArrowRight}
+    >
+      Sign Up
+    </Button>
+  ),
+
+  feature: [
+    {
+      icon: Code,
+      title: <>Developers & Architects</>,
+      description: (
+        <>
+          Learn how to build secure and scalable authorization and authentication.
+          Attend sessions and presentations to hear how others are
+          using Ory Open Source in production environments.   
+        </>
+      )
+    },
+    {
+      icon: LockOpen,
+      title: <>Security Specialists</>,
+      description: (
+        <>
+        Empower your developers to keep your users data secure and drive adoption of developer security practices. Learn from your peers, Ory customers, and industry leaders about how to build and run secure Auth systems. 
+        </>
+      )
+    },
+    {
+      icon: CirclesThreePlus,
+      title: <>Product Owners & Tech Leads</>,
+      description: (
+        <>
+        Gather with developers, security, and operations teams to learn more about modern cloud infrastructure. Hear first-hand examples of how teams are leveraging Ory Open Source. 
+        </>
+      )
+    },
+    {
+      icon: UserPlus,
+      title: <>Everyone else</>,
+      description: (
+        <>
+          Everyone who is interested in or passionate about open source development, cloud security, identity software, development best practices and much more.
+        </>
+      )
+    }
+  ]
+}
+
+export const summitlist: SummitlistProps = {
+  id: 'summit.list',
+  features: [
+    {
+      icon: CircleThreePlus,
+      title: 'Why attend Ory Summit?',
+      description: (
+        <>
+          Learn about cloud security best practices at Ory Summit 2021, a free
+          developer conference.
+        </>
+      ),
+      features: [
+        {
+          title: 'Code',
+          description: (
+            <>
+              Code, code, code and more code. Get examples and answers from the
+              experts.
+            </>
+          ),
+          icon: CheckCircle
+        },
+        {
+          title: 'Learn',
+          description: (
+            <>
+              Level up your skills by engaging in tech talks and workshops
+              delivered by proven experts.
+            </>
+          ),
+          icon: CheckCircle
+        },
+        {
+          title: 'Connect',
+          description: (
+            <>
+              Connect & meet with like-minded peers from around the world and
+              share your experiences.
+            </>
+          ),
+          icon: CheckCircle
+        },
+        {
+          title: 'Expand',
+          description: (
+            <>
+              Expand your network via virtual events: find new partners,
+              clients, employers, products and solutions.
+            </>
+          ),
+          icon: CheckCircle
+        }
+      ]
+    }
+  ]
+}
