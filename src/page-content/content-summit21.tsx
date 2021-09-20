@@ -64,7 +64,7 @@ export const featureContentCloud: FeatureContentProps = {
   title: <>Join a global community</>,
   description: (
     <>
-      Ory Summit is a meetup place for , Security Specialists, Product Owners &
+      Ory Summit is a meetup place for Security Specialists, Product Owners &
       Tech Leads and everyone interested in open source security software.
     </>
   ),
@@ -261,7 +261,7 @@ export const agendalist: AgendalistProps = {
       title: 'Agenda Day Two',
       description: (
         <>
-          Day one of the Ory Summit, October 29th 2021, from 14:00 GMT until
+          Day two of the Ory Summit, October 29th 2021, from 14:00 GMT until
           20:00 GMT.
           <Button
             style={'link-inline'}
