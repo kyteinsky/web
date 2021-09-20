@@ -52,7 +52,7 @@ export const pricingSaas: Pick<PricingProps, 'saas'> = {
       title: 'Enterprise',
       description: 'Ory with dedicated support & custom hosting options',
       price: 'Individual',
-      priceDescription: 'per Project/Member',
+      priceDescription: 'monthly per Project',
       button: (
         <Button to={'mailto:sales@ory.sh'} style={'outlined'}>
           Contact sales
