@@ -9,7 +9,7 @@ export const jobs: AnnouncementProps = {
 }
 
 export const summit: AnnouncementProps = {
-  longText: 'Ory Summit 2021: free two day dev conference around security, IAM and more!',
-  shortText: 'Ory Summit 2021!',
+  longText: 'Sign up for Ory Summit 2021: free dev conference around security, IAM and more!',
+  shortText: 'Sign up for Ory Summit 2021!',
   link: '/summit21/'
 }

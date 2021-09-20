@@ -100,6 +100,10 @@ export const links: Pick<FooterPropTypes, 'category'> = {
       menuCategory: 'Developers',
       menuItems: [
         {
+          title: 'Ory Summit 2021',
+          to: '/summit21'
+        },        
+        {
           title: 'Documentation',
           to: '/docs'
         },

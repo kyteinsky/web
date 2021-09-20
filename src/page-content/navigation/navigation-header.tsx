@@ -79,7 +79,7 @@ export const dropdownMenu: Pick<NavProps, 'dropdownMenu'> = {
       title: 'Developers',
       mainMenu: [
         {
-          title: 'Ory Summit',
+          title: 'Ory Summit 2021',
           description: 'Join our developer conference.',
           to: '/summit21'
         },
@@ -178,7 +178,7 @@ export const mobileMenu: Pick<NavProps, 'mobileMenu'> = {
         category: 'Developers',
         mobileMenuItems: [
           {
-            title: 'Ory Summit',
+            title: 'Ory Summit 2021',
             to: '/summit21'
           },
           {
