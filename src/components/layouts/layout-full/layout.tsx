@@ -10,7 +10,7 @@ import 'prismjs/components/prism-typescript'
 import 'prismjs/components/prism-yaml'
 import React from 'react'
 
-import { jobs } from '../../../page-content/navigation/navigation-announcement'
+import { summit } from '../../../page-content/navigation/navigation-announcement'
 import * as footer from '../../../page-content/navigation/navigation-footer'
 import * as nav from '../../../page-content/navigation/navigation-header'
 import Footer from '../footer/footer'

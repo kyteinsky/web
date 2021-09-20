@@ -11,7 +11,7 @@ import {
 } from 'react-accessible-accordion'
 
 import { useWindowSize } from '../../../hook/useWindowSize'
-import { jobs } from '../../../page-content/navigation/navigation-announcement'
+import { summit } from '../../../page-content/navigation/navigation-announcement'
 import Button from '../../freestanding/button/button'
 import Container from '../../freestanding/containers/container'
 import ContentText from '../../freestanding/content/content-text'
@@ -150,7 +150,7 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
         [styles.navigationMobileOpen]: mobileOpenNav
       })}
     >
-      <Announcement {...jobs} />
+      <Announcement {...summit} />
       <Container
         fluid={true}
         noWrap={true}

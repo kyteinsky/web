@@ -7,3 +7,9 @@ export const jobs: AnnouncementProps = {
   shortText: 'Ory is hiring!',
   link: '/jobs/'
 }
+
+export const summit: AnnouncementProps = {
+  longText: 'Ory Summit 2021: free two day dev conference around security, IAM and more!',
+  shortText: 'Ory Summit 2021!',
+  link: '/summit21/'
+}
