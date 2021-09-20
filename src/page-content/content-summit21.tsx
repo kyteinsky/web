@@ -4,6 +4,7 @@ import React from 'react'
 import Button from '../components/freestanding/button/button'
 import { PropTypes as FeatureContentProps } from '../components/layouts/feature-content/feature-content'
 import { PropTypes as SummitlistProps } from '../components/layouts/featurelist/feature-list'
+import { PropTypes as AgendalistProps } from '../components/layouts/featurelist/feature-list'
 import { PropTypes as FeatureProps } from '../components/layouts/features/features'
 import { PropTypes as HeroProps } from '../components/layouts/hero/hero'
 import { PropTypes as SeoProps } from '../components/layouts/seo/seo'
@@ -22,20 +23,26 @@ const CheckCircle = (
 const CircleThreePlus = (
   <i className={'ph-circles-three-plus-fill base-white size24'} />
 )
-
+const CaretUp = <i className={'ph-caret-up-fill base-white size24'} />
+const CaretDoubleUp = (
+  <i className={'ph-caret-double-up-fill base-white size24'} />
+)
+const ChalkboardTeacher = (
+  <i className={'ph-chalkboard-teacher-fill themed-primary size24'} />
+)
 export const seo: SeoProps = {
   description:
     'Ory is a certified and battle-tested identity solution backed by a large open source community and trusted by Fortune500 orgs.',
   title: 'Ory - Open Source Identity Solutions For Everyone',
   keywords:
-    'authentication, open source, login, authorization, security, session management, Json web tokens, access control, OAuth2.0 server, identity server, AuthN, AuthZ'
+    'authentication, open source, login, authorization, security, devops, developer conference, developer talks, AuthN, AuthZ'
 }
 
 export const hero: HeroProps = {
   id: 'index.hero',
   title: 'Ory Summit 2021 ',
   description:
-    'The Ory Summit is a free developer conference bringing together security experts and open source developers from all around the world. Join us on October 28 & 29.',
+    'Ory Summit is a free developer conference bringing together security experts and open source developers from all around the world. Join us on October 28 & 29.',
   buttons: (
     <Button to={'/summit21'} style={'filled'} iconRight={RocketLaunch}>
       Sign Up
@@ -76,19 +83,10 @@ export const featureContentCloud: FeatureContentProps = {
   )
 }
 
-export const features: FeatureProps = {
+export const audience: FeatureProps = {
   id: 'summit.audience',
   overline: 'Ory Developer Conference',
   title: <>Join a global community</>,
-  buttons: (
-    <Button
-      to={'https://console.ory.sh/registration'}
-      style={'link'}
-      iconRight={ArrowRight}
-    >
-      Sign Up
-    </Button>
-  ),
 
   feature: [
     {
@@ -96,9 +94,9 @@ export const features: FeatureProps = {
       title: <>Developers & Architects</>,
       description: (
         <>
-          Learn how to build secure and scalable authorization and authentication.
-          Attend sessions and presentations to hear how others are
-          using Ory Open Source in production environments.   
+          Learn how to build secure and scalable authorization and
+          authentication. Attend sessions and presentations to hear how others
+          are using Ory Open Source in production environments.
         </>
       )
     },
@@ -107,7 +105,10 @@ export const features: FeatureProps = {
       title: <>Security Specialists</>,
       description: (
         <>
-        Empower your developers to keep your users data secure and drive adoption of developer security practices. Learn from your peers, Ory customers, and industry leaders about how to build and run secure Auth systems. 
+          Empower your developers to keep your users data secure and drive
+          adoption of developer security practices. Learn from your peers, Ory
+          customers, and industry leaders about how to build and run secure Auth
+          systems.
         </>
       )
     },
@@ -116,7 +117,9 @@ export const features: FeatureProps = {
       title: <>Product Owners & Tech Leads</>,
       description: (
         <>
-        Gather with developers, security, and operations teams to learn more about modern cloud infrastructure. Hear first-hand examples of how teams are leveraging Ory Open Source. 
+          Gather with developers, security, and operations teams to learn more
+          about modern cloud infrastructure. Hear first-hand examples of how
+          teams are leveraging Ory Open Source.
         </>
       )
     },
@@ -125,7 +128,9 @@ export const features: FeatureProps = {
       title: <>Everyone else</>,
       description: (
         <>
-          Everyone who is interested in or passionate about open source development, cloud security, identity software, development best practices and much more.
+          Everyone who is interested in or passionate about open source
+          development, cloud security, identity software, development best
+          practices and much more.
         </>
       )
     }
@@ -136,7 +141,7 @@ export const summitlist: SummitlistProps = {
   id: 'summit.list',
   features: [
     {
-      icon: CircleThreePlus,
+      icon: CaretUp,
       title: 'Why attend Ory Summit?',
       description: (
         <>
@@ -184,6 +189,128 @@ export const summitlist: SummitlistProps = {
             </>
           ),
           icon: CheckCircle
+        }
+      ]
+    }
+  ]
+}
+
+export const agendalist: AgendalistProps = {
+  id: 'summit.agenda',
+  features: [
+    {
+      icon: CaretUp,
+      title: 'Agenda Day One',
+      description: (
+        <>
+          Day one of the Ory Summit, October 28th 2021, from 08:00 GMT until
+          14:00 GMT.
+          <Button
+            style={'link-inline'}
+            to={'https://form.typeform.com/to/J63VwXqX'}
+          >
+            Sign up to tune in!
+          </Button>
+        </>
+      ),
+      features: [
+        {
+          title: '$Talk by $Person from $Company',
+          description: (
+            <>
+              A short description of the talk outlining why it is interesting to
+              hear and some other information.
+            </>
+          ),
+          icon: ChalkboardTeacher
+        },
+        {
+          title: '$Talk by $Person from $Company',
+          description: (
+            <>
+              A short description of the talk outlining why it is interesting to
+              hear and some other information.
+            </>
+          ),
+          icon: ChalkboardTeacher
+        },
+        {
+          title: '$Talk by $Person from $Company',
+          description: (
+            <>
+              A short description of the talk outlining why it is interesting to
+              hear and some other information.
+            </>
+          ),
+          icon: ChalkboardTeacher
+        },
+        {
+          title: '$Talk by $Person from $Company',
+          description: (
+            <>
+              A short description of the talk outlining why it is interesting to
+              hear and some other information.
+            </>
+          ),
+          icon: ChalkboardTeacher
+        }
+      ]
+    },
+    {
+      icon: CaretDoubleUp,
+      title: 'Agenda Day Two',
+      description: (
+        <>
+          Day one of the Ory Summit, October 29th 2021, from 14:00 GMT until
+          20:00 GMT.
+          <Button
+            style={'link-inline'}
+            to={'https://form.typeform.com/to/J63VwXqX'}
+          >
+            Sign up to tune in!
+          </Button>
+        </>
+      ),
+      features: [
+        {
+          title: '$Talk by $Person from $Company',
+          description: (
+            <>
+              A short description of the talk outlining why it is interesting to
+              hear and some other information.
+            </>
+          ),
+          icon: ChalkboardTeacher
+        },
+        {
+          title: '$Talk by $Person from $Company',
+          description: (
+            <>
+              A short description of the talk outlining why it is interesting to
+              hear and some other information.
+            </>
+          ),
+          icon: ChalkboardTeacher
+        },
+        {
+          title: '$Talk by $Person from $Company',
+          description: (
+            <>
+              A short description of the talk outlining why it is interesting to
+              hear and some other information.
+            </>
+          ),
+          icon: ChalkboardTeacher
+        },
+        {
+          title: '$Talk by $Person from $Company',
+          description: (
+            <>
+              A short description of the talk outlining why it is interesting to
+              hear and some other information.
+            </>
+          ),
+          icon: ChalkboardTeacher
         }
       ]
     }

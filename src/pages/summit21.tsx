@@ -1,8 +1,8 @@
 import React from 'react'
 
+import Cta from '../components/layouts/cta/cta'
 import FeatureList from '../components/layouts/featurelist/feature-list'
 import Features from '../components/layouts/features/features'
-import Cta from '../components/layouts/cta/cta'
 import Hero from '../components/layouts/hero/hero'
 import LayoutFull from '../components/layouts/layout-full/layout'
 import SEO from '../components/layouts/seo/seo'
@@ -12,10 +12,11 @@ const SummitPage = () => (
   <LayoutFull>
     <SEO {...content.seo} />
     <Hero {...content.hero} />
-    <Cta preselect="keto" />
+    <Cta />
     <FeatureList {...content.summitlist} />
-    <Features {...content.features} />
-    <Features {...content.agenda} />
+    <Features {...content.audience} />
+    <Cta />
+    <FeatureList {...content.agendalist} />
   </LayoutFull>
 )
 
