@@ -4,7 +4,7 @@ path: '/login-spa-react-nextjs-authentication-example-api/'
 banner: '/images/blog-banner-kratos.png'
 
 title: |
-  Add Authentication to your ReactJS / NextJS Single Page Application (SPA)
+  Add Authentication to your React / NextJS Single Page Application (SPA)
 
 teaser: |
   Add login, registration, user and profile management to ReactJS single page applications
@@ -15,42 +15,49 @@ seo:
   title: |
     Authentication for React Native with Examples
   description: |
-    Add open source login to any ReactJS / NextJS app using free open source.
+    Add open source login to any ReactJS / NextJS single page app (SPA) using free open source.
   keywords: |
     login, auth, authentication, registration, reactjs, vercel, nextjs, react, spa, single page app, native desktop,
     open source, ory, ory kratos
 
-publishedAt: '2021-07-08'
+publishedAt: '2021-09-22'
 author: aeneasr
 
 overline: |
-ReactJS / NextJS Authentication
+  React / NextJS Authentication
 ---
 
 Reading this guide you will implement a ReactJS application with
-[a page which shows if the user is logged in or not](pages/index.tsx),
-[a page](pages/protected.tsx) using an [API endpoint](pages/api/protected.ts)
+[a page which shows if the user is logged in or not](https://github.com/ory/react-nextjs-example/blob/d026c7f0c2f296bf38947810d9394b05f927d6a0/pages/index.tsx),
+[a page](pages/protected.tsx) using an [API endpoint](https://github.com/ory/react-nextjs-example/blob/d026c7f0c2f296bf38947810d9394b05f927d6a0/pages/api/protected.ts)
 which is protected,
-[login](pages/login.tsx),
-[registration](pages/ui/registration.tsx),
-[account settings](pages/ui/settings.tsx),
-[account verification](pages/ui/verification.tsx) (e.g. email, phone, activate
+[login](https://github.com/ory/react-nextjs-example/blob/d026c7f0c2f296bf38947810d9394b05f927d6a0/pages/login.tsx),
+[registration](https://github.com/ory/react-nextjs-example/blob/d026c7f0c2f296bf38947810d9394b05f927d6a0/pages/ui/registration.tsx),
+[account settings](https://github.com/ory/react-nextjs-example/blob/d026c7f0c2f296bf38947810d9394b05f927d6a0/pages/ui/settings.tsx),
+[account verification](https://github.com/ory/react-nextjs-example/blob/d026c7f0c2f296bf38947810d9394b05f927d6a0/pages/ui/verification.tsx) (e.g. email, phone, activate
 account),
-[account verification](pages/ui/recovery.tsx) (e.g. reset password),
-using the NextJS framework and deploy it to Vercel. You can see this app in action at
+[account verification](https://github.com/ory/react-nextjs-example/blob/d026c7f0c2f296bf38947810d9394b05f927d6a0/pages/ui/recovery.tsx) (e.g. reset password),
+using the NextJS framework and deploy it to Vercel. You can see this app in action at **[https://auth-login-nextjs-vercel-ory.vercel.app](https://auth-login-nextjs-vercel-ory.vercel.app)**.
 
-**[auth-login-nextjs-vercel-ory.app](https://react-nextjs-example.vercel.app)**
+import CodeFromRemote from '../../components/freestanding/utils/codefromremote'
 
 What is special about this application is that no session management, cookies, or backend is needed! To implement the logic
 for login, registration, account recovery, session management, MFA we will be relying on the Open Source project [Ory Kratos](https://github.com/ory/kratos)
 which is also available as a managed cloud service at [Ory Cloud](https://www.ory.sh/).
 
-We chose NextJS and Vercel as the framework to keep boilerplate low and offer a fast deployment option. Of course, this style of
-integration works with all ReactJS apps! We also have options
+We chose [NextJS](https://nextjs.org) and [Vercel](https://vercel.com/) as the framework to keep boilerplate small and offer a fast deployment option. Of course, this style of
+integration works with all [React](https://reactjs.org) apps! We also have options
 
 To avoid the complexity of setting up routing and state management and in the
 hopes of making this example easy to consume, we have chosen NextJS as the
 framework.
+
+The structure of this guide is as follows:
+
+1. Get up and running with a quick example
+2. Set up the example with Ory Kratos via Ory Cloud
+3. Set up the example with self-hosted Ory Kratos
+4. Explanations and code examples
 
 ## Start Hacking
 
@@ -58,6 +65,8 @@ Per default this project is using the Ory Cloud Playground. This allows you to j
 bring it live with:
 
 ```
+git clone https://github.com/ory/react-nextjs-example.git
+cd react-nextjs-example
 npm i
 npm run dev
 ```
@@ -89,7 +98,7 @@ export NEXT_PUBLIC_ORY_SDK_URL=https://...
 npm run dev
 ```
 
-Per default, this project is using our playground. One NextJS API route is using
+Per default, this project is using the Ory Cloud Playgorund. One NextJS API route is using
 the Ory Kratos / Ory Cloud Admin API to load the user's identity, which is why you can
 optionally set up an [Ory Personal Access Token](https://www.ory.sh/docs/guides/create-personal-access-token) as well:
 
@@ -252,11 +261,17 @@ npm i --save @ory/client @ory/integrations
 
 Add a new file under `pages/api/.ory/[...paths].ts` with the following contents:
 
-https://github.com/ory/react-nextjs-example/blob/init-example/pages/api/.ory/%5B...paths%5D.ts
+<CodeFromRemote
+  lang="tsx"
+  src="https://github.com/ory/react-nextjs-example/blob/d026c7f0c2f296bf38947810d9394b05f927d6a0/pages/api/.ory/%5B...paths%5D.ts"
+/>
 
-Setting up the SDK is easy:
+Setting up the SDK to interact with Ory Cloud's APIs is just a few lines of code:
 
-https://github.com/ory/react-nextjs-example/blob/init-example/pkg/sdk/cloud.ts
+<CodeFromRemote
+  lang="tsx"
+  src="https://github.com/ory/react-nextjs-example/blob/d026c7f0c2f296bf38947810d9394b05f927d6a0/pkg/sdk/cloud.ts"
+/>
 
 #### Running Ory Kratos Yourself
 
@@ -271,8 +286,24 @@ npm i --save @ory/kratos-client
 
 Setting up the SDK is easy:
 
-https://github.com/ory/react-nextjs-example/blob/init-example/pkg/sdk/open-source.ts
+<CodeFromRemote
+  lang="tsx"
+  src="https://github.com/ory/react-nextjs-example/blob/d026c7f0c2f296bf38947810d9394b05f927d6a0/pkg/sdk/open-source.ts"
+/>
 
 ### Rendering Login, Registration, ... Forms
 
-You can install
+Let's take a look at how we render the registration page, for example.
+
+<CodeFromRemote
+  lang="tsx"
+  src="https://github.com/ory/react-nextjs-example/blob/d026c7f0c2f296bf38947810d9394b05f927d6a0/pages/registration.tsx"
+/>
+
+
+### Protecting API Endpoints
+
+<CodeFromRemote
+  lang="tsx"
+  src="https://github.com/ory/react-nextjs-example/blob/d026c7f0c2f296bf38947810d9394b05f927d6a0/pages/api/protected.ts"
+/>
