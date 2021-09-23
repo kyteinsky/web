@@ -153,12 +153,22 @@ npm run build
 
 Then, set up your [Vercel](https://vercel.com/) account and create a new app.
 You will need to configure your
-[Ory Cloud Project SDK URL](https://www.ory.sh/docs/concepts/services-api) and [Ory Personal Access Token (optional)](https://www.ory.sh/docs/guides/create-personal-access-token) as
-environment variables for your app:
+[Ory Cloud Project SDK URL](https://www.ory.sh/docs/concepts/services-api) in your Vercel deployment:
 
-![Add Ory Cloud Personal Access Token to Vercel](./docs/images/vercel-deploy.png)
+![Add Ory Cloud SDK URL to Vercel](../../images/articles/auth-react-next-vercel/vercel-env-var.png)
 
-Next all you need to do is to run the deploy command:
+By the way! If you want to use separate Ory Cloud Projects for staging, production, and development then use different Ory Cloud Project SDK URLs
+for the different environments by un/selecting the checkboxes in the Vercel UI:
+
+![Use a development project for development Vercel](../../images/articles/auth-react-next-vercel/vercel-dev.png)
+
+![Use a production project for production Vercel](../../images/articles/auth-react-next-vercel/vercel-prod.png)
+
+If you want to call Ory Cloud's Admin APIs from your serverless functions, optionally set up the [Ory Personal Access Token](https://www.ory.sh/docs/guides/create-personal-access-token):
+
+![Connect Vercel with Ory Personal Access Token](../../images/articles/auth-react-next-vercel/vercel-secret.png)
+
+Next all you need to do is to run the deploy command and connect it to the project you created:
 
 ```
 npx vercel deploy --prod
