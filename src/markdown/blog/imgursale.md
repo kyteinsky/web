@@ -1,6 +1,6 @@
 ---
 path: '/imgur-medialab-acquisition/'
-banner: 
+banner: ''
 publishedAt: '2021-29-09'
 author: Marney Kline
 
