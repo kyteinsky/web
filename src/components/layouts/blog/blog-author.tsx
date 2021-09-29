@@ -27,6 +27,10 @@ const authors: { [key: string]: Profile } = {
   k9ert: {
     fullname: 'Kim Neunert',
     github: 'https://github.com/k9ert'
+  },
+  marneysofia: {
+    fullname: 'Marney Kline',
+    github: 'https://github.com/marneysofia'
   }
 }
 
