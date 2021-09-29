@@ -1,7 +1,7 @@
 ---
 path: '/imgur-medialab-acquisition/'
 banner: ''
-publishedAt: '2021-29-09'
+publishedAt: '2021-09-29'
 author: marneysofia
 
 title: 'Ory Hydra User Imgur is Acquired by MediaLab - Congrats'
