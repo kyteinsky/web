@@ -2,7 +2,7 @@
 path: '/imgur-medialab-acquisition/'
 banner: ''
 publishedAt: '2021-29-09'
-author: Marney Kline
+author: marneysofia
 
 title: 'Ory Hydra User Imgur is Acquired by MediaLab - Congrats'
 teaser: Excited for Imgur as it embarks on its next chapter!
