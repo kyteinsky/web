@@ -1,7 +1,6 @@
 declare const styles: {
   readonly faq: string
-  readonly faqHighlight: string
-  readonly faqHeading: string
-  readonly faqHeadingIcon: string
+  readonly title: string
+  readonly questions: string
 }
 export = styles
