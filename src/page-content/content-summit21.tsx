@@ -43,19 +43,6 @@ export const hero: HeroProps = {
   title: 'Ory Summit 2021 ',
   description:
     'Ory Summit is a free developer conference bringing together security experts and open source developers from all around the world. Join us on October 28 & 29.',
-  buttons: (
-    <Button to={'/summit21'} style={'filled'} iconRight={RocketLaunch}>
-      Sign Up
-    </Button>
-  ),
-  image: (
-    <StaticImage
-      src="../images/illustrations/summit.png"
-      loading="lazy"
-      alt="Overview of the Ory Console"
-      className="responsive"
-    />
-  )
 }
 
 export const featureContentCloud: FeatureContentProps = {
@@ -67,11 +54,6 @@ export const featureContentCloud: FeatureContentProps = {
       Ory Summit is a meetup place for Security Specialists, Product Owners &
       Tech Leads and everyone interested in open source security software.
     </>
-  ),
-  buttons: (
-    <Button to={'https://console.ory.sh'} style={'filled'}>
-      Sign Up
-    </Button>
   ),
   content: (
     <StaticImage
@@ -141,7 +123,6 @@ export const summitlist: SummitlistProps = {
   id: 'summit.list',
   features: [
     {
-      icon: CaretUp,
       title: 'Why attend Ory Summit?',
       description: (
         <>
@@ -199,7 +180,6 @@ export const agendalist: AgendalistProps = {
   id: 'summit.agenda',
   features: [
     {
-      icon: CaretUp,
       title: 'Agenda Day One',
       description: (
         <>
@@ -257,7 +237,6 @@ export const agendalist: AgendalistProps = {
       ]
     },
     {
-      icon: CaretDoubleUp,
       title: 'Agenda Day Two',
       description: (
         <>

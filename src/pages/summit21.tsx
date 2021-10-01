@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Cta from '../components/layouts/cta/cta'
 import FeatureList from '../components/layouts/featurelist/feature-list'
 import Features from '../components/layouts/features/features'
 import Hero from '../components/layouts/hero/hero'
@@ -13,10 +12,8 @@ const SummitPage = () => (
   <LayoutFull>
     <SEO {...content.seo} />
     <Hero {...content.hero} />
-    <Cta />
     <FeatureList {...content.summitlist} />
     <Features {...content.audience} />
-    <Cta />
     <FeatureList {...content.agendalist} />
   </LayoutFull>
 )
