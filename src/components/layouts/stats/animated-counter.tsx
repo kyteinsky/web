@@ -1,48 +1,36 @@
 import numeral from 'numeral'
 import React, { Component } from 'react'
 import CountUp from 'react-countup'
-import VisibilitySensor from 'react-visibility-sensor'
+import { InView } from 'react-intersection-observer'
 
 interface PropTypes {
   countTo: number
 }
 
-interface StateTypes {
-  visible: boolean
-}
-
-class AnimatedCounter extends Component<PropTypes, StateTypes> {
-  state = {
-    visible: false
-  }
-
-  onChange = (visible: boolean) => {
-    if (visible && this.props.countTo > 0) {
-      this.setState({ visible })
-    }
-  }
-
+class AnimatedCounter extends Component<PropTypes> {
   render() {
     return (
-      <VisibilitySensor delayedCall onChange={this.onChange}>
-        <div>
-          {this.state.visible ? (
-            <CountUp
-              delay={0}
-              start={0}
-              end={this.props.countTo}
-              useEasing
-              duration={3}
-              formattingFn={(v) => numeral(v).format('0.0a')}
-            >
-              {({ countUpRef }) => <span ref={countUpRef} />}
-            </CountUp>
-          ) : (
-            <span>0</span>
-          )}
-        </div>
-      </VisibilitySensor>
-    )
+      <InView>
+        {({ inView, ref }) => (
+          <div ref={ref}>
+            {inView ? (
+              <CountUp
+                delay={0}
+                start={0}
+                end={this.props.countTo}
+                useEasing
+                duration={3}
+                formattingFn={(v) => numeral(v).format('0.0a')}
+              >
+                {({ countUpRef }) => <span ref={countUpRef} />}
+              </CountUp>
+            ) : (
+              <span>0</span>
+            )}
+          </div>
+        )}
+      </InView>
+    );
   }
 }
 
